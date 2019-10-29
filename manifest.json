@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "name": "FX",
+  "description": "...",
+  "version": "1.0",
+  "browser_action": {
+    "default_title": "FX",
+    "default_popup": "index.html"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["jquery-3.4.1.js",
+        "test.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "<all_urls>",
+    "webRequest",
+    "experimental",
+    "webRequestBlocking",
+    "debugger",
+    "browsingData"
+  ]
+}
