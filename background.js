@@ -85,7 +85,7 @@ function start(arr = 0) {
             } else if(Math.abs(Number((arr[arr.length - 1]+ '00000000000').toString().slice(0, 6).replace('.', '')) - Number((((result / (j - 1))+'000000000').toString().toString().slice(0, 6).replace('.', '')))) == 0) {
                 return 0;
             }else {
-                return Number(arr[arr.length - 1].toString().slice(0, 6).replace('.', '')) - Number(((result / (j - 1)).toString().toString().slice(0, 6).replace('.', '')));
+                return Number((arr[arr.length - 1]+ '00000000000').toString().slice(0, 6).replace('.', '')) - Number((((result / (j - 1))+'000000000').toString().toString().slice(0, 6).replace('.', '')));
             }
 
         }
